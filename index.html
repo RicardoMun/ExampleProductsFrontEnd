@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Frontend - Javascript Edition</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <button id="bLogin" type="button" class="btn btn-success mt-3">Login</button>
+
+        <h1 class="mt-3 mb-4">Product Information</h1>
+
+        <div class="mb-3">
+            <label for="id" class="form-label">Id</label>
+            <input type="text" class="form-control" id="id" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name">
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" step="0.01" min="0" class="form-control" id="price">
+        </div>
+        <div class="mb-3">
+            <label for="expiration" class="form-label">Expiration date</label>
+            <input type="date" class="form-control" id="expiration">
+        </div>
+
+        <button id="bAdd" type="button" class="btn btn-primary">Add</button>
+        <button id="bDelete" type="button" class="btn btn-danger">Delete</button>
+        <button id="bClear" type="button" class="btn btn-secondary">Clear</button>
+        <button id="bReload" type="button" class="btn btn-info">Reload</button>
+
+        <h1 class="mt-5 mb-4">Products List</h1>
+
+        <button id="bSort" type="button" class="btn btn-primary">Sort</button>
+
+        <table id="products-list" class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Expiration Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">ID</th>
+                    <td>NAME</td>
+                    <td>PRICE</td>
+                    <td>EXPIRATION</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Login modal dialog -->
+
+    <div id="login-dialog" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">User Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="login_email" class="form-label">Email</label>
+                        <input type="text" value="ricardo@gmail.com" class="form-control" id="login_email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="login_password" class="form-label">Password</label>
+                        <input type="password" value="hola1234" class="form-control" id="login_password">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="blogin-accept" type="button" class="btn btn-primary">Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="code.js"></script>
+</body>
+
+</html>
